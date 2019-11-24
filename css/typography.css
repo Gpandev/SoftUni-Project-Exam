@@ -1,7 +1,7 @@
 html {
-    font-family: Georgia, serif;
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: var(--font-size-main, 16px);
+    line-height: var(--font-line-height, 1.5);
+    font-family: var(--font-family-main, Georgia, serif);
 }
 
 body,
@@ -17,7 +17,7 @@ button {
 p,
 ul,
 ol {
-    padding-bottom: 1em;
+    padding-bottom: var(--layout-padding-bottom, 1em);
 }
 
 ul,
