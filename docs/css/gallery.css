@@ -4,9 +4,6 @@
     margin-top: 3em;
 }
 
-/* .gallery-heading {
-    text-align: center;
-} */
 .gallery ul {
     display: flex;
     flex-wrap: wrap;
