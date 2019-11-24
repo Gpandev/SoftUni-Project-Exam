@@ -1,0 +1,16 @@
+body {
+}
+
+.site {
+    max-width: var(--layout-width, 60em);
+    margin: 0 auto;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.5);
+}

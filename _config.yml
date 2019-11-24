@@ -2,6 +2,7 @@
 title: Guest House - Greece
 email: your-email@example.com
 description: Hi There !
+destination: docs
 baseurl: "" 
 url: "" 
 twitter_username: jekyllrb
