@@ -1,8 +1,8 @@
 :root {
-    --font-size-main: 17px;
+    --font-size-main: 16px;
     --font-line-height: 1.5;
     --font-family-main: Georgia, serif;
 
-    --layout-width: 65em;
+    --layout-width: 70em;
     --layout-padding-bottom: 1.5em;
 }

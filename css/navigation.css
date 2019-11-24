@@ -1,7 +1,7 @@
 .nav {
     text-align: right;
     padding-top: 0.5em;
-}   
+}  
 
 .nav ul {
     display: flex;
@@ -32,7 +32,7 @@
 }
 
 .nav li.page-title-about a:before {
-    content: '\f47f';
+    content: '\f015';
 }
 
 .nav li.page-title-contacts a:before {
@@ -45,4 +45,25 @@
 
 .nav li.page-title-price a::before {
     content: '\f153';
+}
+
+.site-footer {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    margin-top: 1.5em;
+}
+
+.site-footer ul {
+    flex-direction: column;
+    max-width: 12em;
+}
+
+.site-footer p {
+    margin-right: 1em;
+}
+
+.site-footer .nav {
+    text-align: left;
+    padding-top: 0.5em;
 }

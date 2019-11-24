@@ -1,5 +1,5 @@
 html {
-    font-size: var(--font-size-main, 16px);
+    font-size: var(--font-size-main, 14px);
     line-height: var(--font-line-height, 1.5);
     font-family: var(--font-family-main, Georgia, serif);
 }
@@ -42,25 +42,25 @@ h6 {
 }
 
 h1 {
-    font-size: 2.6em;
+    font-size: 2.2em;
 }
 
 h2 {
-    font-size: 2.0em;
-}
-
-h3 {
     font-size: 1.6em;
 }
 
-h4 {
-    font-size: 1.4em;
-}
-
-h5 {
+h3 {
     font-size: 1.2em;
 }
 
+h4 {
+    font-size: 1em;
+}
+
+h5 {
+    font-size: 0.8em;
+}
+
 h6 {
-    font-size: 1.0em;
+    font-size: 0.6em;
 }

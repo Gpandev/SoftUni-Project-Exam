@@ -22,9 +22,10 @@
             <nav class="nav">
                 <ul>
                     {% for page in site.pages %}
-                        {% if page.title %}
-                            <li class="page-title-{{ page.title | slugify }}"><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
-                        {% endif %}
+                    {% if page.title %}
+                    <li class="page-title-{{ page.title | slugify }}"><a
+                            href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+                    {% endif %}
                     {% endfor %}
                 </ul>
             </nav>
@@ -37,7 +38,18 @@
         </main>
 
         <footer class="site-footer">
-            <p>{{ site.title }} &copy; All rights reserved</p>
+            <nav class="nav">
+                <ul>
+                    {% for page in site.pages %}
+                    {% if page.title %}
+                    <li class="page-title-{{ page.title | slugify }}"><a
+                            href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </nav>
+
+            <p> All rights reserved - GEM 2019 &copy;</p>
         </footer>
 
     </div>

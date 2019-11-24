@@ -11,6 +11,34 @@ body {
     justify-content: space-between;
     align-items: center;
     
-    border-radius: 1em;
-    box-shadow: rgba(0, 0, 0, 0.5);
+    border-radius: 0.7em;
+    box-shadow: 0.3em 0.2em 0.2em rgba(121, 106, 106, 0.5);
 }
+
+.site-branding a {
+    text-decoration: none;
+    color: royalblue;
+    text-align: center;
+}
+
+.title-pages {
+    text-align: center;
+}
+
+.site-about-page {
+    display: flex;
+}
+
+.site-about-page section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-about-page section article {
+    flex: 1 1 30%;
+    background-color: rgb(240, 238, 238);
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+
