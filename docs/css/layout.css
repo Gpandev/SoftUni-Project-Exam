@@ -4,6 +4,7 @@ body {
 .site {
     max-width: var(--layout-width, 60em);
     margin: 0 auto;
+    background-color: rgb(237, 248, 248);
 }
 
 .site-header {
