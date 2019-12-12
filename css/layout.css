@@ -24,6 +24,23 @@ body {
 
 .title-pages {
     text-align: center;
+    animation: slideHead 0.7s linear;
+}
+
+@keyframes slideHead {
+    0% {
+        transform: translateX(-20rem);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(-10rem);
+    }
+
+    100% {
+        transform: translateX();
+        opacity: 1;
+    }
 }
 
 .site-about-page {
@@ -32,14 +49,32 @@ body {
 
 .site-about-page section {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .site-about-page section article {
-    flex: 1 1 30%;
+    flex: 0 0 100%;
     background-color: rgb(240, 238, 238);
     margin: 0.5em;
     padding: 0.5em;
+    animation: slide 0.8s linear;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(20rem);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(10rem);
+    }
+
+    100% {
+        transform: translateX();
+        opacity: 1;
+    }
 }
 
 .index-page{
