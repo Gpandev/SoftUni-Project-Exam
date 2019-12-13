@@ -1,7 +1,9 @@
 
 .gallery {
     display: flex;
+    max-width: var(--layout-width, 60em);
     margin-top: 3em;
+    margin: 0 auto;
 }
 
 .gallery ul {

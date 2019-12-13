@@ -14,7 +14,7 @@ const slide = (function () {
             currentIndex = 1;
         }
         pic[currentIndex - 1].style.display = "block";
-        setTimeout(routing, 3000);
+        setTimeout(routing, 4000);
 
     }
 }());

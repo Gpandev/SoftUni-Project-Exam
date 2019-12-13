@@ -8,27 +8,35 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/fontawesome/css/all.css">
     <title>{{ page.title }}</title>
+    <script>
+        window.addEventListener('load', (event) => {
+            document.querySelector('body').classList.add('loaded');
+        });
+    </script>
 </head>
 
 <body>
 
     <div class="site">
         <header class="site-header">
-            <div class="site-branding">
-                <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-                <p>{{ site.description }}</p>
-            </div>
+                <div class="site-branding">
+                    <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+                </div>
 
-            <nav class="nav">
-                <ul>
-                    {% for page in site.pages %}
-                    {% if page.title %}
-                    <li class="page-title-{{ page.title | slugify }}"><a
-                            href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
-                    {% endif %}
-                    {% endfor %}
-                </ul>
-            </nav>
+                <nav class="nav">
+                    <ul>
+                        {% assign sorted_pages = site.pages | sort:'order' %}
+                        {% for page in sorted_pages %}
+                        {% if page.title %}
+                        <li class="page-title-{{ page.title | slugify }}"><a
+                                href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </nav>
+                <section>
+                    <h2 class="title-pages">{{ page.title-on-page }}</h2>
+                </section>
         </header>
 
         <main class="site-main">
@@ -40,7 +48,8 @@
         <footer class="site-footer">
             <nav class="nav">
                 <ul>
-                    {% for page in site.pages %}
+                    {% assign sorted_pages = site.pages | sort:'order' %}
+                    {% for page in sorted_pages %}
                     {% if page.title %}
                     <li class="page-title-{{ page.title | slugify }}"><a
                             href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
