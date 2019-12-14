@@ -50,6 +50,8 @@ gulp.task("watch", function() {
 	gulp.watch( 'docs/**/*.js' ).on('change', browserSync.reload );
 });
 
-gulp.task("deploy", gulp.series('jekyll', 'sass'));
-
 gulp.task("default", gulp.series('jekyll', 'sass', 'watch'));
+
+gulp.task("deploy", function() {
+	return cp.spawn('git commit -am "Update" && git pull && git push', { stdio: "inherit", shell: true });
+});
