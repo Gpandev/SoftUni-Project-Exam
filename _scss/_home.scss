@@ -1,0 +1,33 @@
+.home-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    article {
+        display: flex;
+        padding: 0.2em;
+        margin: 0;
+    }
+
+    p {
+        flex: 0 48%;
+        padding: 0.5em;
+        font-size: 1.4em;
+        line-height: 1.7;
+    }
+
+    .media-home {
+        flex: 0 48%;
+        width: 100%;
+        height: 50%;
+
+        img {
+            border: 1.5px solid black;
+            padding: 0.3em;
+            background-color: #fff;
+            box-shadow: 0.2em 0.2em 0 rgba($color: #000000, $alpha: 0.3);
+            width: 100%;
+            height: 30%;
+        }
+    }
+}
