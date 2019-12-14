@@ -46,21 +46,21 @@
         }
     }
 
-    li.page-title-about a:before {
-        content: '\f015';
-    }
+    // li.page-title-about a:before {
+    //     content: '\f015';
+    // }
 
-    li.page-title-contacts a:before {
-        content: '\f2a0';
-    }
+    // li.page-title-contacts a:before {
+    //     content: '\f2a0';
+    // }
 
-    li.page-title-gallery a::before {
-        content: '\f03e';
-    }
+    // li.page-title-gallery a::before {
+    //     content: '\f03e';
+    // }
 
-    li.page-title-price a::before {
-        content: '\f153';
-    }
+    // li.page-title-price a::before {
+    //     content: '\f153';
+    // }
 }
 
 .site-footer {
@@ -68,19 +68,21 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 1.5em;
+    padding: 1em;
     background-color: #369;
-}
 
-.site-footer ul {
-    /* flex-direction: column; */
-    max-width: 12em;
-}
+    ul {
+        max-width: 12em;
+    }
 
-.site-footer p {
-    margin-right: 1em;
-}
+    p {
+        margin-right: 1em;
+        padding: 1em;
+    }
 
-.site-footer .nav {
-    text-align: left;
-    padding-top: 0.5em;
+    .nav {
+        text-align: left;
+        padding-top: 0.5em;
+    }
+
 }
