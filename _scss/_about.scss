@@ -1,0 +1,83 @@
+/******    About Page     **********/
+
+.section-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    article {
+        flex: 1 1 100%;
+        display: flex;
+        padding: 2em;
+        height: 35em;
+        animation: slide 1.2s linear;
+
+        &:nth-child(odd) {
+            background-color: #eee;
+        }
+
+        &:nth-child(even) .media-home {
+            order: 1;
+        }
+
+        &:nth-child(even) p {
+            order: 2;
+        }
+
+    }
+
+    .about-wrap-content {
+        width: var(--layout-width-index-img, 60em);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0.2em;
+        margin: 0 auto;
+    }
+
+    h2 {
+        text-align: center;
+        flex: 0 0 100%;
+    }
+
+    p {
+        flex: 0 0 65%;
+        padding: 0.5em;
+        margin: 0.3em;
+        font-size: 1.2em;
+        line-height: 1.5;
+    }
+
+    .media-about {
+        flex: 0 0 29%;
+        border: 1.5px solid black;
+        margin: 0.3em;
+        padding: 0.5em;
+        background-color: #fff;
+        box-shadow: 0.3em 0.3em 0.3em rgba($color: #000000, $alpha: 0.3);
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(50rem);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translateX(15rem);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX();
+            opacity: 1;
+        }
+    }
+}
