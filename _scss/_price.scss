@@ -1,21 +1,21 @@
 .page-prices {
     display: flex;
     margin-top: 3em;
-}
 
-.page-prices ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    list-style: none;
-}
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        list-style: none;
 
-.page-prices ul li {
-    display: flex;
-    align-items: center;
-    flex: 0 0 46%;
-    margin-bottom: 2.5em;
-    border: 0.2em solid #000;
-    padding: 2em 1em;
-    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.4);
+        li {
+            display: flex;
+            align-items: center;
+            flex: 0 0 46%;
+            margin-bottom: 2.5em;
+            border: 0.2em solid #000;
+            padding: 2em 1em;
+            box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.4);
+        }
+    }
 }

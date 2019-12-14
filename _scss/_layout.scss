@@ -5,7 +5,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     /* background-image: url('../images/background.jpg'); */
-    background-color: #ccc;
+    // background-color: #ccc;
 }
 
 .site > * {
@@ -163,6 +163,10 @@ body {
     align-items: center;
 }
 
+.index-page section:nth-child(even) {
+    background-color: #999;
+}
+
 .index-page section {
     align-items: flex-end;
 }
@@ -189,7 +193,6 @@ body {
     margin: 0 auto;
     width: var(--layout-width-index-img, 60em);
     height: 25em;
-
 }
 
 

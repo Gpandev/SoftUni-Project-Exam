@@ -2,66 +2,65 @@
     text-align: right;
     padding-top: 1.3em;
     z-index: 5;
-}  
 
-.nav ul {
-    display: flex;
-    padding: 0;
-}
-.nav ul li {
-    display: block;
-    padding: 0 0.5em;
-    transform: translate(0, -5em);
-    opacity: 0;
-    transition: opacity 0.3s ease-in, transform 0.3s ease-in;
-}
+    ul {
+        display: flex;
+        padding: 0;
 
-.nav ul li:nth-child(1) { transition-delay: 0.5s; }
-.nav ul li:nth-child(2) { transition-delay: 0.3s; }
-.nav ul li:nth-child(3) { transition-delay: 0.2s; }
-.nav ul li:nth-child(4) { transition-delay: 0.1s; }
-.nav ul li:nth-child(5) { transition-delay: 0.0s; }
+        li {
+            display: block;
+            padding: 0 0.5em;
+            transform: translate(0, -5em);
+            opacity: 0;
+            transition: opacity 0.3s ease-in, transform 0.3s ease-in;
 
-.loaded .nav ul li {
-    opacity: 1;
-    transform: translate(0, 0);
-}
+            .loaded & {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
 
-.nav a {
-    display: flex;
-    padding: 0.5em 1em;
-    color: #FFF;
-    text-decoration: none;
-    background:  rgba(0, 0, 0, 0.2);
-    transition: background 0.4s ease-in;
-}
+            @for $i from 1 through 5 {
+                &:nth-child(#{$i}) { transition-delay: $i * 0.1s; }
+            }
+        }
+    }
 
-.nav a:hover {
-    background:rgba(0, 0, 0, 0.9);
-    color: #FFF;
-}
+    a {
+        display: flex;
+        padding: 0.5em 1em;
+        color: #FFF;
+        text-decoration: none;
+        background:  rgba(0, 0, 0, 0.2);
+        transition: background 0.4s ease-in;
 
-.nav li a:before {
-    display: block;
-    margin-right: 0.5em;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-}
+        &:before {
+            display: block;
+            margin-right: 0.5em;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
 
-.nav li.page-title-about a:before {
-    content: '\f015';
-}
+        &:hover {
+            background:rgba(0, 0, 0, 0.9);
+            color: #FFF;
+        }
+    }
 
-.nav li.page-title-contacts a:before {
-    content: '\f2a0';
-}
+    li.page-title-about a:before {
+        content: '\f015';
+    }
 
-.nav li.page-title-gallery a::before {
-    content: '\f03e';
-}
+    li.page-title-contacts a:before {
+        content: '\f2a0';
+    }
 
-.nav li.page-title-price a::before {
-    content: '\f153';
+    li.page-title-gallery a::before {
+        content: '\f03e';
+    }
+
+    li.page-title-price a::before {
+        content: '\f153';
+    }
 }
 
 .site-footer {
