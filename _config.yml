@@ -3,7 +3,8 @@ title: Ocean View - Greece
 email: your-email@example.com
 description: Rent a House
 destination: docs
-baseurl: "/SoftUni-Project-Exam" 
+baseurl: "" 
+# baseurl: "/SoftUni-Project-Exam" 
 url: "" 
 twitter_username: jekyllrb
 github_username:  jekyll
