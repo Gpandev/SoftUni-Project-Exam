@@ -2,6 +2,18 @@ html {
     font-size: var(--font-size-main, 14px);
     line-height: var(--font-line-height, 1.5);
     font-family: var(--font-family-main, Georgia, serif);
+
+    @include bp(mobile) {
+        font-size: 14px;
+    }
+
+    @include bp(phone) {
+        font-size: 12px;
+    }
+
+    @include bp(desktop) {
+        font-size: 16px;
+    }
 }
 
 body,
