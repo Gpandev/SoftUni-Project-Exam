@@ -3,8 +3,15 @@
     padding-top: 1.3em;
     z-index: 5;
 
+    @include bp(mobile) {
+        display: none;
+    }
+
     ul {
-        display: flex;
+        @include bp(desktop) {
+            display: flex;
+        }
+
         padding: 0;
 
         li {
@@ -14,37 +21,48 @@
             opacity: 0;
             transition: opacity 0.3s ease-in, transform 0.3s ease-in;
 
+
+
             .loaded & {
                 opacity: 1;
                 transform: translate(0, 0);
             }
 
             @for $i from 1 through 5 {
-                &:nth-child(#{$i}) { transition-delay: $i * 0.1s; }
+                &:nth-child(#{$i}) {
+                    transition-delay: $i * 0.1s;
+                }
             }
+
+            a {
+                display: flex;
+                padding: 0.5em 1em;
+                color: #FFF;
+                text-decoration: none;
+                background: rgba(0, 0, 0, 0.3);
+                transition: background 0.4s ease-in;
+                border-radius: 0.4em;
+                outline: none;
+
+                // &:before {
+                //     display: block;
+                //     margin-right: 0.5em;
+                //     font-family: "Font Awesome 5 Free";
+                //     font-weight: 900;
+                // }
+                @at-root .current_page a,
+                &:focus,
+                &:hover {
+                    background: rgba(0, 0, 0, 0.9);
+                    color: #FFF;
+                }
+            }
+
+
         }
     }
 
-    a {
-        display: flex;
-        padding: 0.5em 1em;
-        color: #FFF;
-        text-decoration: none;
-        background:  rgba(0, 0, 0, 0.2);
-        transition: background 0.4s ease-in;
 
-        &:before {
-            display: block;
-            margin-right: 0.5em;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-        }
-
-        &:hover {
-            background:rgba(0, 0, 0, 0.9);
-            color: #FFF;
-        }
-    }
 
     // li.page-title-about a:before {
     //     content: '\f015';
@@ -69,7 +87,7 @@
     justify-content: space-between;
     margin-top: 1.5em;
     padding: 1em;
-    background-color: #369;
+    background-image: url('https://jooinn.com/images/blue-water-texture-3.jpg');
 
     ul {
         max-width: 12em;
@@ -85,4 +103,22 @@
         padding-top: 0.5em;
     }
 
+}
+
+.nav-toggle {
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+
+    &:checked + .site .site-header .nav {
+        @include bp(mobile) {
+            display: block;
+        }
+    }
+
+    &-label {
+        @include bp(desktop) {
+            display: none;
+        }
+    }
 }
